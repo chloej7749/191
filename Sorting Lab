@@ -1,0 +1,72 @@
+# This is my flow chart
+
+
+# Explanations:
+Question 2: I chose the sorting algorithm where I find the largest number and have it swap with the current number, and doing that down the line because I thought it was the most simple and intuitive. You can use for loops to quickly achieve this process.
+Question 3: I ran into some problems going through the lab. It has been a while since I have coded Java, so of course there were some accidental syntax errors. I also had to adapt to not being able to use an ArrayList, which i thought would be easier considering that there isn't a fixed size like arrays.
+
+# Video:
+https://1drv.ms/v/c/04e020fac6629467/ERWFPmu4wJNAohNG4Zn8Av0Bd6FRjh-5iD8NGwB7wH1OZA?e=EB3UK6
+
+# Code: pasted from netbeans
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.sorting;
+// import necessary packages to use their methods
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ *
+ * @author chloe
+ * CISC 191, Professor Khan, Sorting Lab (8/31/2025)
+ */
+public class Sorting {
+
+    public static void main(String[] args) {
+        // declaring Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        // reads the size of the array the user wants
+        int arrSize = scanner.nextInt();
+        System.out.print("Enter array of values (separated by spaces): ");
+        // declares new array of integers myArr
+        int[] myArr = new int[arrSize];
+        
+        // reads the elements of the inputted "array"
+        for (int i = 0; i < arrSize; i++){
+            // myArr is filled with the inputted values
+            myArr[i] = scanner.nextInt();
+        }
+        
+        // uses sortArray method to sort values in descending order
+        sortArray(myArr, arrSize);
+        
+        // converts sorted myArr to string text
+        System.out.println(Arrays.toString(myArr));
+        
+    }
+    // Sorts inputted values into descending order, takes in inputs: array, array size
+    public static void sortArray(int[] myArr, int arrSize){
+        // outside loop: loops through i = 0,1,2 (3 is not needed) ex. 1 2 3 4
+        for (int i = 0; i < arrSize - 1; i++) {
+            // initializer. the first thing is the maximum
+            // consider this just the "unsorted" portion, since (i++)
+            int maxIndex = i;
+            // inside loop: loops through j = 1,2,3
+            for (int j = i + 1; j < arrSize; j++){
+                // if value at j is greater than value at max index, then the max index is now j
+                if (myArr[j] > myArr[maxIndex]){
+                    maxIndex = j;
+                }
+            }
+            
+            // swaps the value at i with the value at maxIndex
+            int val = myArr[i];
+            myArr[i] = myArr[maxIndex];
+            myArr[maxIndex] = val;
+        }
+    }
+}
