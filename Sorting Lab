@@ -1,5 +1,5 @@
 # This is my flow chart
-
+https://drive.google.com/file/d/1nmXUIKMxEB0KNLfWQjjdLfCep8MZfRuB/view?usp=sharing
 
 # Explanations:
 Question 2: I chose the sorting algorithm where I find the largest number and have it swap with the current number, and doing that down the line because I thought it was the most simple and intuitive. You can use for loops to quickly achieve this process.
@@ -46,7 +46,9 @@ public class Sorting {
         
         // converts sorted myArr to string text
         System.out.println(Arrays.toString(myArr));
-        
+
+        scanner.close();
+    
     }
     // Sorts inputted values into descending order, takes in inputs: array, array size
     public static void sortArray(int[] myArr, int arrSize){
