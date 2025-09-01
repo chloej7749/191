@@ -1,0 +1,65 @@
+# This is my flowchart
+https://drive.google.com/file/d/1GcwzMHLXXSPSkmvRuwA1geVYkvHAS7t8/view?usp=sharing
+
+# Explanations
+Question 2: I would loop through the words on the website and follow the same method. I would make sure to omit printing out words we've already seen as then it would just be useless to print them out. I would see if Java has something similar to Python's dictionaries, which would be a lot more efficient.
+Question 3: It took a while to grasp the concept because at first I didn't see the point in having a listSize while still having wordsList = 20. But I realized that I needed this listSize variable in my loop through the user's input.
+There were other issues here and there as well. I had to find  .equalsIgnoreCase(), which helped a lot. I didn't know that .equalsIgnoreCase() could be used before, so it was definitely cool to learn something new.
+
+# Code:
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.wordfrequency;
+import java.util.Scanner;
+
+/**
+ *
+ * @author chloe
+ */
+public class WordFrequency {
+    // getWordFrequency method: accepts array wordsList, size of array, and specific word to find frequency
+    public static int getWordFrequency(String[] wordsList, int listSize, String currWord){
+        // count of word = 0
+        int count = 0;
+        // for every word in the wordsList, if the word = the currWord, increase the count of that word
+        for (int i = 0; i < listSize; i++){
+            if (wordsList[i].equalsIgnoreCase(currWord)){
+                count ++;
+            }
+        }
+        // returns the total number of times that word appeared
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        // using Scanner to read user input
+        Scanner scanner = new Scanner(System.in);
+        // declares wordsList array of strings with 20 elements
+        String[] wordsList = new String[20];
+        
+        // asks user for number of words they will enter
+        System.out.print("How many words will you enter? ");
+        // sets user input = size of list
+        int listSize = scanner.nextInt();
+        System.out.print("Enter words: ");
+        // sets value at every index of array = to what is read from user input
+        for (int i = 0; i < listSize; i++){
+            wordsList[i] = scanner.next();
+        }
+        System.out.println("Word frequencies: ");
+        // loops through values of wordsList to find frequency of wordsList[i]
+        for (int i = 0; i < listSize; i++){
+            int frequency = getWordFrequency(wordsList, listSize, wordsList[i]);
+            System.out.println(wordsList[i] + ": " + frequency);
+        }
+        
+        // remember to close the scanner to avoid info links (i forgot to last time!)
+        scanner.close();
+                
+    }
+}
+
+# Video
+https://1drv.ms/v/c/04e020fac6629467/EQH78XM1Bm5AkwMvjYQPiFABnMu1cT104x9m1OKmaLeBLQ?e=dlMOTZ
