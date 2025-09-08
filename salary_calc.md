@@ -1,29 +1,30 @@
-1. FLOWCHART
+**1. FLOWCHART**
 
 https://drive.google.com/file/d/1-Nm0S79BgyDSuEVNVm_wk3jUajpRBk35/view?usp=sharing
 
 
 
 
-2. What were your challenges in performing the lab (from design to the implementation phases)?
+**2. QUESTION**\
+What were your challenges in performing the lab (from design to the implementation phases)?
 
 I think the main thing was just understanding how the template code worked. For methods like getValue, I had to plug in numbers to see how the salaries would work out through the method and what value would
 be returned. I think this is the most crucial step to understanding the code, and you cannot go further with it. Hence, it was somewhat challenging. Also for Task B, we had to use an overloaded constructor,
 so that required using "this." I feel like that concept is somewhat unintuitive so it was slightly challenging, especialyl when trying to explain it (I may have stuttered a bit in the video).
 
 
-3.VIDEOS
+ **3.VIDEOS**
 
-TASK A: https://drive.google.com/file/d/1Hey6y2nNt2fyBW54GEVbNtlHpFgEVdcM/view?usp=sharing
+TASK A: https://drive.google.com/file/d/1Hey6y2nNt2fyBW54GEVbNtlHpFgEVdcM/view?usp=sharing \
 TASK B: https://drive.google.com/file/d/1I0i3lvR9adSnILX2A4Qx6MfoHlGZ4ED-/view?usp=sharing
 
 
-4. CODE
+ **4. CODE**
 
-TASK A:
+  **TASK A:**\
 IncomeTextMain.java:
 
-'''java
+```java
 package com.mycompany.incometaxmain;
 import java.util.Scanner;
 
@@ -80,10 +81,11 @@ public class IncomeTaxMain {
       } 
    } 
 } 
-'''
 
-TaxTablesTool.java:
-'''java
+```
+
+TaxTableTools.java:
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -144,13 +146,13 @@ public class TaxTablesTool {
    } 
 } 
 
-'''
+```
 
 
 
-TASK B:
+  **TASK B:**\
 IncomeTextMain.java:
-'''java
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
@@ -204,9 +206,9 @@ public class IncomeTaxMain2 {
    } 
 } 
 
-'''
+```
 TaxTableTools.java:
-'''java
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -276,4 +278,4 @@ public class TaxTableTools {
       return result;
    } 
 } 
-'''
+```
