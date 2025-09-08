@@ -22,7 +22,7 @@ TASK B: https://drive.google.com/file/d/1I0i3lvR9adSnILX2A4Qx6MfoHlGZ4ED-/view?u
 
 TASK A:
 IncomeTextMain.java:
-'''
+'''java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
@@ -85,7 +85,7 @@ public class IncomeTaxMain {
 } 
 '''
 TaxTablesTool.java:
-''' java
+'''java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -152,7 +152,7 @@ public class TaxTablesTool {
 
 TASK B:
 IncomeTextMain.java:
-''' java
+'''java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
@@ -208,7 +208,7 @@ public class IncomeTaxMain2 {
 
 '''
 TaxTableTools.java:
-''' java
+'''java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
