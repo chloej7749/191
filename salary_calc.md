@@ -1,0 +1,281 @@
+1. FLOWCHART
+
+https://drive.google.com/file/d/1-Nm0S79BgyDSuEVNVm_wk3jUajpRBk35/view?usp=sharing
+
+
+
+
+2. What were your challenges in performing the lab (from design to the implementation phases)?
+
+I think the main thing was just understanding how the template code worked. For methods like getValue, I had to plug in numbers to see how the salaries would work out through the method and what value would
+be returned. I think this is the most crucial step to understanding the code, and you cannot go further with it. Hence, it was somewhat challenging. Also for Task B, we had to use an overloaded constructor,
+so that required using "this." I feel like that concept is somewhat unintuitive so it was slightly challenging, especialyl when trying to explain it (I may have stuttered a bit in the video).
+
+
+3.VIDEOS
+
+TASK A: https://drive.google.com/file/d/1Hey6y2nNt2fyBW54GEVbNtlHpFgEVdcM/view?usp=sharing
+TASK B: https://drive.google.com/file/d/1I0i3lvR9adSnILX2A4Qx6MfoHlGZ4ED-/view?usp=sharing
+
+
+4. CODE
+
+TASK A:
+IncomeTextMain.java:
+'''java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.incometaxmain;
+import java.util.Scanner;
+
+/**
+ *
+ * @author chloe
+ */
+
+public class IncomeTaxMain {    
+
+   // Method to prompt for and input an integer
+   public static int getInteger(Scanner input, String prompt) {
+      int inputValue;
+      
+      System.out.println(prompt + ": ");
+      inputValue = input.nextInt();
+      
+      return inputValue;
+   }
+
+   // *********************************************************************** 
+
+   public static void main(String [] args) { 
+      final String PROMPT_SALARY = "\nEnter annual salary (-1 to exit)";
+      Scanner scnr = new Scanner(System.in);
+      int annualSalary;
+      double taxRate;
+      int taxToPay;
+      int i;
+
+      int [] salary   = {      0, 20000, 50000, 100000, Integer.MAX_VALUE };
+      double [] taxTable = { 0.0, 0.10,   0.20, 0.30,        0.40 };
+
+      // Access the related class; declares new table
+      TaxTableTools table = new TaxTableTools();
+      // defines new search and value values for salary and tax rate
+      int[] newSearch =   {0,  10000, 40000, 80000, 100000, Integer.MAX_VALUE};
+      double[] newValue = {0.0, 0.10, 0.20,  0.30,  0.40,   0.50};  
+      // calls setter method setTables to assign new values
+      table.setTables(newSearch, newValue);
+
+      // Get the first annual salary to process
+      annualSalary = getInteger(scnr, PROMPT_SALARY);
+
+      while (annualSalary >= 0) {
+         taxRate = table.getValue(annualSalary);
+         taxToPay= (int)(annualSalary * taxRate);     // Truncate tax to an integer amount
+         System.out.println("Annual Salary: " + annualSalary + 
+                            "\tTax rate: " + taxRate +
+                            "\tTax to pay: " + taxToPay);
+
+         // Get the next annual salary
+         annualSalary = getInteger(scnr, PROMPT_SALARY);
+      } 
+   } 
+} 
+'''
+TaxTablesTool.java:
+''' java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.incometaxmain;
+
+/**
+ *
+ * @author chloe
+ */
+public class TaxTablesTool {
+
+   /** This class searches the 'search' table with a search argument and
+       returns the corresponding value in the 'value' table. Variable
+       'nEntries' has the number of entries in each table.
+   */
+   private int [] search =   {   0,  20000, 50000, 100000, Integer.MAX_VALUE };
+   private double [] value = { 0.0,   0.10,  0.20,   0.30,              0.40 };
+   private int nEntries;
+
+   // *********************************************************************** 
+
+   // Default constructor 
+   public TaxTableTools () {
+      nEntries  = search.length;  // Set the length of the search table
+   } 
+   
+   // sets new values to the search and value tables 
+   public void setTables(int[] newSearch, double[] newValue){
+       search = newSearch;
+       value = newValue;
+       nEntries = newSearch.length;
+
+   }
+   
+   // Method to get a value from one table based on a range in the other table
+   // returns tax value for corresponding salary value
+   public double getValue(int searchArgument) {
+      double result;
+      boolean keepLooking;
+      int i;
+
+      result = 0.0;
+      keepLooking = true;
+      i = 0;
+
+      while ((i < nEntries) && keepLooking) {
+         if (searchArgument <= search[i]) {
+            result = value[i];
+            keepLooking = false;
+         }
+         else {
+            ++i;
+         }
+      } 
+
+      return result;
+   } 
+} 
+
+'''
+
+
+
+TASK B:
+IncomeTextMain.java:
+''' java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.incometaxmain2;
+
+/**
+ *
+ * @author chloe
+ */
+import java.util.Scanner;
+
+public class IncomeTaxMain2 {    
+   public static void main(String [] args) { 
+      final String PROMPT_SALARY = "\nEnter annual salary (-1 to exit)";
+      Scanner scnr = new Scanner(System.in);
+      int annualSalary;
+      double taxRate;
+      int taxToPay;
+      int i;
+
+      // Tables to use in the exercise are the same as in the TaxTableTools class
+      // int [] salaryRange = {   0,  20000, 50000, 100000,  Integer.MAX_VALUE };
+      // double [] taxRates = { 0.0,   0.10,  0.20,   0.30,               0.40 };
+
+      // 2(a) Modify the salary and tax tables in the main method to use 
+      // different salary ranges and tax rates.
+      int []    salaryRange  = {   0,  30000,  60000,  Integer.MAX_VALUE };
+      double [] taxRates     = { 0.0,  0.25,   0.35,               0.45 };
+
+      // Access the related class
+      // TaxTableTools table = new TaxTableTools();
+
+      // 2(b)Use the just-created overloaded constructor to initialize 
+      // the salary and tax tables.
+        TaxTableTools table = new TaxTableTools(salaryRange, taxRates);
+
+      // Get the first annual salary to process
+      annualSalary = table.getInteger(scnr, PROMPT_SALARY);
+
+      while (annualSalary >= 0) {
+         taxRate = table.getValue(annualSalary);
+         taxToPay= (int)(annualSalary * taxRate);     // Truncate tax to an integer amount
+         System.out.println("Annual Salary: " + annualSalary + 
+                            "\tTax rate: " + taxRate +
+                            "\tTax to pay: " + taxToPay);
+
+         // Get the next annual salary
+         annualSalary = table.getInteger(scnr, PROMPT_SALARY);
+      } 
+   } 
+} 
+
+'''
+TaxTableTools.java:
+''' java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.incometaxmain2;
+
+/**
+ *
+ * @author chloe
+ */
+import java.util.Scanner;
+
+public class TaxTableTools {
+
+   /** This class searches the 'search' table with a search argument and
+       returns the corresponding value in the 'value' table. Variable
+       'nEntries' has the number of entries in each table.
+   */
+   private int [] search =   {   0, 20000, 50000, 100000,  Integer.MAX_VALUE };
+   private double [] value = { 0.0,  0.10,  0.20,   0.30,               0.40 };
+   private int nEntries;
+
+   // Default constructor 
+   public TaxTableTools () {
+      nEntries  = search.length;  // Set the length of the search table
+   } 
+   
+   // overloaded constructor with parameters of search and value tables
+   public TaxTableTools(int[] search, double[] value){
+       this.search = search;
+       this.value = value;
+       this.nEntries = search.length;
+   }
+   // Method to prompt for and input an integer
+   
+   public int getInteger(Scanner input, String prompt) {
+      int inputValue = 0;
+      
+      System.out.println(prompt + ": ");
+      inputValue = input.nextInt();
+      
+      return inputValue;
+   } 
+
+
+   // Method to get a value from one table based on a range in the other table
+
+   public double getValue(int searchArgument) {
+      double result;
+      boolean keepLooking;
+      int i;
+
+      result = 0.0;
+      keepLooking = true;
+      i = 0;
+
+      while ((i < nEntries) && keepLooking) {
+         if (searchArgument <= search[i]) {
+            result = value[i];
+            keepLooking = false;
+         }
+         else {
+            ++i;
+         }
+      } 
+
+      return result;
+   } 
+} 
+'''
