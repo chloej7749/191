@@ -1,10 +1,12 @@
 ## Flowchart:
+https://1drv.ms/i/c/04e020fac6629467/Ee3hLpUT2VxFi1v5GDbu3DMB2iyBzZeRGyVVXrdbAAplGQ?e=25IMJe
 
 ## Question:
 Similar to the other lab, the most challenging part of this was implementing Scanner. Luckily with experience on lab 2, this wasn't _too_ hard. Another challenging part was understanding how @Override and
 polymorphism were incorporated into the code. It was fascinating to see two methods of the same name be eexecuted diffrently based on the object they were acting on.
 
 ## Video:
+https://1drv.ms/v/c/04e020fac6629467/ETkb_Di6DxtAoHt9gimoM4cBWCWYmiDg2TLb4urE0N2JSw?e=eSgfdc
 
 ## Code:
 **BookInformation.java**
