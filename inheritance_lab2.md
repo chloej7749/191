@@ -1,11 +1,11 @@
 ## Flowchart:
-
+https://1drv.ms/i/c/04e020fac6629467/EYXXdceRqNpEqKjg9Ljw4BAB3CPNrkWlut05yDaCCiBXEg?e=X5nnx3
 
 ## Question:
 I think the challenging part in this lab was combining Scanner with the other factors. I had to figure out how to get the code to line up with the expected input, so it could print the expected output. This meant I needed to have a Course object and OfferedCourse object because the expected object had both.
 
 ## Video:
-
+https://1drv.ms/v/c/04e020fac6629467/ES85Hz4TrQ5Epg-uN0Pu4ZQBRYU-7pVEkBD9PkAqDdRPSw?e=pa24fu
 
 ## Code:
 **CourseInformation.java**
