@@ -2,8 +2,7 @@
 
 
 ## Question:
-Like the previous lab, the challenges was just understanding how inheritance works and how to implement it into the code to make things more efficient. That way, I can create an object of the subclass type
-which inherits the methods of the superclass and just act on that object, instead of having to do both. It's understanding how inheritance can be applied to make our code better!
+I think the challenging part in this lab was combining Scanner with the other factors. I had to figure out how to get the code to line up with the expected input, so it could print the expected output. This meant I needed to have a Course object and OfferedCourse object because the expected object had both.
 
 ## Video:
 
