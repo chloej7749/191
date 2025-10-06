@@ -38,7 +38,9 @@ public class CourseInformation {
         // print course instructor/location/time using defined get methods - for OfferedCourse
         System.out.println("\t Instructor Name: " + newOfferedCourse.getInstructor());
         System.out.println("\t Location: " + newOfferedCourse.getLocation());
-        System.out.println("\t Class Time: " + newOfferedCourse.getTime()); 
+        System.out.println("\t Class Time: " + newOfferedCourse.getTime());
+
+        scnr.close();
     }
 }
 
