@@ -1,4 +1,5 @@
 ## Flowchart:
+https://drive.google.com/file/d/1JI6tsSVTvTqKoUM0Vb6dNEFSydp25C1u/view?usp=sharing
 
 
 ## Question:
@@ -6,7 +7,7 @@ This lab wasn't very challenging, especially given the partial code. I think the
 situation, which shortens the code.
 
 ## Video:
-
+https://1drv.ms/v/c/04e020fac6629467/EYN1fdhjeTxGpnAwi90HV1IB1Js9boGCv_CqXdZCl5Kr7w?e=tWO91F
 
 ## Code:
 **StudentDerivationFromPerson.java**
