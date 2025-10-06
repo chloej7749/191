@@ -11,25 +11,34 @@ which inherits the methods of the superclass and just act on that object, instea
 ## Code:
 **CourseInformation.java**
 ``` java
+import java.util.Scanner;
+
 public class CourseInformation {
 
     public static void main(String[] args) {
         // create new object newCourse of type OfferedCourse - which extends the Course class
-        OfferedCourse newCourse = new OfferedCourse();
+        Course newCourse = new Course();
+        OfferedCourse newOfferedCourse = new OfferedCourse();
+        Scanner scnr = new Scanner(System.in);
         
-        // set input values
-        newCourse.storeCourseNum("ECE387");
-        newCourse.storeCourseTitle("Embedded Systems Design");
-        newCourse.storeCourseInstructor("Mark Patterson");
-        newCourse.storeCourseLocation("Wilson Hall 231");
-        newCourse.storeCourseTime("WF: 2-3:30 pm");
+        // set input values for regular course
+        newCourse.storeCourseNum(scnr.nextLine());
+        newCourse.storeCourseTitle(scnr.nextLine());
+        // set input values for offered course
+        newOfferedCourse.storeCourseNum(scnr.nextLine());
+        newOfferedCourse.storeCourseTitle(scnr.nextLine());
+        newOfferedCourse.storeCourseInstructor(scnr.nextLine());
+        newOfferedCourse.storeCourseLocation(scnr.nextLine());
+        newOfferedCourse.storeCourseTime(scnr.nextLine());
         
         // call method that prints course number and title
         newCourse.printInfo();
-        // print course instructor/location/time using defined get methods
-        System.out.println("\t Instructor Name: " + newCourse.getInstructor());
-        System.out.println("\t Location: " + newCourse.getLocation());
-        System.out.println("\t Class Time: " + newCourse.getTime()); 
+        newOfferedCourse.printInfo();
+        
+        // print course instructor/location/time using defined get methods - for OfferedCourse
+        System.out.println("\t Instructor Name: " + newOfferedCourse.getInstructor());
+        System.out.println("\t Location: " + newOfferedCourse.getLocation());
+        System.out.println("\t Class Time: " + newOfferedCourse.getTime()); 
     }
 }
 
