@@ -2,7 +2,7 @@
 https://1drv.ms/i/c/04e020fac6629467/EQb8u1nMqMFOkupWQ7r-FSABK7yK1mtN4Y0HwyHJzcngqQ?e=qWFA3m
 
 ## Question:
-The most difficult part of this lab was just understanding the spinner syntax and getting used to GUI. There was a lot of code involved in this, and the lecture was a great
+The most difficult part of this lab was just understanding the spinner syntax and getting used to GUI. There was a lot of code involved in this (slightly overwhelming), and the lecture was a great
 resource that I used for assistance in this lab.
 
 ## Video:
