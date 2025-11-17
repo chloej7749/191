@@ -2,10 +2,11 @@
 https://1drv.ms/i/c/04e020fac6629467/IQCjB-WjlWdqRbFIZAkBwT8rAUOPhfpq4V0pyGya0fRtOZY?e=I2kbFg
 
 ## Question
-In my opinoin, merge sorting is more confusing than insertion sorting. Merge sorting was definitely slightly harder to grasp with all the different variables, which I found the most difficult part of this lab.
+In my opinion, merge sorting is more confusing than insertion sorting. Merge sorting was definitely slightly harder to grasp with all the different variables, which I found the most difficult part of this lab.
 
 ## Video
-
+https://1drv.ms/v/c/04e020fac6629467/IQCR7hjZrSqkSbF673jReVMlAezKyUqVTvufh7zD87D0KbM?e=Recyvk
+oops
 
 ## Code
 ``` java
