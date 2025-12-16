@@ -79,8 +79,8 @@ public class Auto {
                 hasResults = true;
                 output.append(
                     resultset.getString("car_name") +
-                    " | MPG: " + resultset.getDouble("mpg") +
-                    " | H-PWR: " + resultset.getDouble("horsepower") + "\n"
+                    " MPG: " + resultset.getDouble("mpg") +
+                    " H-PWR: " + resultset.getDouble("horsepower") + "\n"
                 );
             }
             // prints no results found if nothing can be returned
@@ -100,4 +100,5 @@ public class Auto {
 ```
 
 ## VIDEO
-https://1drv.ms/v/c/04e020fac6629467/IQD4-Rdotvg-RJq58pxG8LY_AW-FNXuQeYWlFsrtWkZy_Ck?e=Ceidlb
+had to re-record now because i realized the pop up window didn't show up; sorry for late submission
+https://1drv.ms/v/c/04e020fac6629467/IQDkolWZ5CbCTJX9kyOalljqAaKFdHVJgnv2RzjcMXetd_E?e=YmPdye
